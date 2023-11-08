@@ -7,6 +7,7 @@ Submitted by:
 - **Mojeed Ashaleye**
 - **Eric Jacobs**
 - **Enrique Rodriguez**
+- **Ricardo Alvarez**
 
 Time spent: **7** hours spent in total
 
