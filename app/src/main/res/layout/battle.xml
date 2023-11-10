@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+<ImageView
+    android:id="@+id/petImage"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:layout_marginTop="100dp"
+    android:rotation="90"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/pokemon" />
+
+<ImageView
+    android:id="@+id/type1"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_marginTop="50dp"
+    android:rotation="90"
+    app:layout_constraintEnd_toStartOf="@+id/petImage"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/petImage"
+    app:srcCompat="@drawable/pokemon" />
+
+<ImageView
+    android:id="@+id/type2"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_marginTop="50dp"
+    android:rotation="90"
+    app:layout_constraintEnd_toStartOf="@+id/petImage3"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/petImage3"
+    app:srcCompat="@drawable/pokemon" />
+
+<ImageView
+    android:id="@+id/petImage3"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:layout_marginBottom="100dp"
+    android:rotation="90"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:srcCompat="@drawable/pokemon" />
+
+<Button
+    android:id="@+id/petButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:rotation="90"
+    android:text="Random Battle"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<TextView
+    android:id="@+id/winner"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginStart="100dp"
+    android:rotation="90"
+    android:text="="
+    android:textAlignment="center"
+    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+    android:textSize="96sp"
+    app:layout_constraintBottom_toTopOf="@+id/petImage3"
+    app:layout_constraintEnd_toStartOf="@+id/petButton"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/petImage" />
+</androidx.constraintlayout.widget.ConstraintLayout>
