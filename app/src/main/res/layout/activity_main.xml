@@ -8,8 +8,10 @@
     android:background="@drawable/main_background">
 
 
-    <ImageButton
+    <Button
         android:id="@+id/main_pokedex_button"
+        android:drawableBottom="@drawable/pokedex_image150"
+        android:drawablePadding="10dp"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:src="@drawable/pokedex_image"
@@ -19,6 +21,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginVertical="75dp"/>
+
 
     <TextView
         android:id="@+id/main_pokedex_text"
@@ -33,11 +36,11 @@
         app:layout_constraintStart_toStartOf="@id/main_pokedex_button"
         app:layout_constraintTop_toBottomOf="@id/main_pokedex_button" />
 
-    <ImageButton
+    <Button
         android:id="@+id/main_pokemoves_button"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/poke_move_image"
+        android:drawableBottom="@drawable/poke_move_image150"
         android:scaleType="fitCenter"
         android:background="#00000000"
         app:layout_constraintStart_toStartOf="@id/main_pokedex_text"
@@ -58,11 +61,11 @@
         app:layout_constraintTop_toBottomOf="@id/main_pokemoves_button"
         app:layout_constraintEnd_toEndOf="@id/main_pokemoves_button"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/main_mockbattle_button"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/mock_battle_image"
+        android:drawableBottom="@drawable/mock_battle_image150"
         android:scaleType="fitCenter"
         android:background="#00000000"
         app:layout_constraintStart_toStartOf="@id/main_pokemoves_text"

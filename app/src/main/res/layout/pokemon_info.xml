@@ -5,68 +5,87 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity"
-    android:background="@drawable/pokemon_info_backgroung">
+    android:background="@drawable/pokemon_info_background">
 
     <LinearLayout
         android:id="@+id/button_menue_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
+        <Button
+            android:id="@+id/home"
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:src="@drawable/combeeicon"
-            android:scaleType="fitCenter"
+            android:layout_marginHorizontal="15dp"
             android:background="#00000000"
-            android:layout_marginHorizontal="15dp"/>
+            android:drawableBottom="@drawable/combeeicon75"
+            android:scaleType="fitCenter" />
 
-        <ImageButton
+        <Button
+            android:id="@+id/pokedex"
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:src="@drawable/pokedex_image"
-            android:scaleType="fitCenter"
+            android:layout_marginHorizontal="15dp"
             android:background="#00000000"
-            android:layout_marginHorizontal="15dp"/>
+            android:drawableBottom="@drawable/pokedex_image75"
+            android:scaleType="fitCenter" />
 
-        <ImageButton
+        <Button
+            android:id="@+id/battle"
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:src="@drawable/mock_battle_image"
-            android:scaleType="fitCenter"
+            android:layout_marginHorizontal="15dp"
             android:background="#00000000"
-            android:layout_marginHorizontal="15dp"/>
+            android:drawableBottom="@drawable/mock_battle_image75"
+            android:scaleType="fitCenter" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/table_info_pic"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/pokemonSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_menue_2"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginVertical="75dp">
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/button_menue_2"
+        app:layout_constraintStart_toStartOf="@+id/button_menue_2"
+        app:layout_constraintTop_toBottomOf="@+id/button_menue_2" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Information goes here"/>
+    <ImageView
+        android:id="@+id/pokemonImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/pokemonSearch"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="@+id/pokemonSearch"
+        app:layout_constraintTop_toBottomOf="@+id/searchPokemon"
+        app:srcCompat="@drawable/pokedex_replace" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pokemon picture goes here"
-            android:layout_marginHorizontal="15dp"/>
+    <TextView
+        android:id="@+id/PokemonMoves"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="30dp"
+        android:text="Move Set"
+        app:layout_constraintEnd_toEndOf="@+id/pokemonImage"
+        app:layout_constraintStart_toStartOf="@+id/pokemonImage"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonImage" />
 
-    </LinearLayout>
+    <Button
+        android:id="@+id/searchPokemon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Search"
+        app:layout_constraintEnd_toEndOf="@+id/pokemonSearch"
+        app:layout_constraintStart_toStartOf="@+id/pokemonSearch"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonSearch" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
